@@ -22,7 +22,7 @@
     /* TYPOGRAPHY */
  
     /* HEADING */
-    --heading-font: 'mono45-headline', monospace;
+    --heading-font: "mono45-headline", monospace;
 
     /* BDOY COPY */
     --body-font: 'articulat-cf', sans-serif;
@@ -39,7 +39,8 @@ h1 {
     font-weight: 100;
 }
 
-li {
+li,
+p {
     font-family: var(--body-font);
     font-style: normal;
     font-weight: 400;
@@ -48,6 +49,59 @@ li {
 li:hover{
     transform: translateY(-2px);
     box-shadow: 0 6px 18px var(--color-olive-50);
+}
+
+/* GRID LAYOUT */
+section,
+.container {
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .row {
+    margin-left: -2%;
+    margin-right: -2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.swapped {
+    flex-direction: row-reverse;
+  }
+  .row.centered {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row > .column {
+    margin: 0 2% 2% 2%;
+    flex-grow: 1;
+  }
+  .row > .column.one-half {
+    max-width: 50%;
+  }
+  .row > .column.one-third {
+    max-width: 29.3333%;
+  }
+  .row > .column.two-thirds {
+    max-width: 62.6666%;
+  }
+  .row > .column.one-fourth {
+    max-width: 21%;
+  }
+  .row > .column.three-fourths {
+    max-width: 71%;
+  }
+  .row > .column.push-one-third {
+    margin-left: 35.3333%;
+  }
+  .row > .column.push-one-fourth {
+    margin-left: 27%;
+  }
+  .row > .column.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* HEADER */
@@ -100,6 +154,10 @@ header a:hover {
 
 /* HERO */
 
+.main-hero{
+  padding-bottom: 6em;
+}
+
 /* Top bar */
 .top-bar {
     background-color: var(--color-olive-100);
@@ -114,7 +172,7 @@ header a:hover {
   .circle {
     width: 20px;
     height: 20px;
-    background: #000;
+    background: var(--color-orange);
     border-radius: 50%;
   }
   
@@ -227,11 +285,62 @@ header a:hover {
 }
 
 /* SELECTED WORKS */
-.selected-works {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 0;
+
+/* SECTIONS */
+.works-projects{
+  padding-top: 6em;
+}
+
+.works,
+.projects{
+  padding: 2em;
+}
+
+.works h1{
+  padding: 0;
+  margin: 0;
+}
+
+.works p{
+  width: 300px;
+}
+
+/* SCROLLABLE DIV W/ CONTENT */
+
+.scrollable-container {
+  width: auto;
+  height: 500px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.scrollable-header {
+  background: var(--color-olive-100);      /* lighter top bar */
+  padding: 10px;
+  border-bottom: 2px solid #000;
+  border-radius: 10px 10px 0 0;
+  flex-shrink: 0;            /* prevents shrinking */
+}
+
+.scrollable-content {
+  background: #fff;       /* gray body */
+  padding: 10px;
+  overflow-y: auto;          /* scrolling happens here */
+  flex: 1;                   /* fills remaining height */
+  border-radius: 0 0 0 10px;
+  scrollbar-color: var(--color-orange-100) transparent; /* custom scrollbar colors */
+}
+
+.section{
+  padding: 2em;
+  background: var(--color-olive-50);
+  
+  &:nth-child(odd) {
+  background-color: var(--color-orange-50);
+  }
 }
 
 /* FOOTER */
