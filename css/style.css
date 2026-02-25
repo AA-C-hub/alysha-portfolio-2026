@@ -219,7 +219,7 @@ header li:hover {
 
 /* Hero section */
 .hero {
-  padding: 60px 80px;
+  padding: 4vh 5vw;
   /* min-height: calc(100vh - 56px); */
 }
 
@@ -395,7 +395,7 @@ header li:hover {
 
 .projects-wrapper {
   position: relative;
-  margin-top: 60px;
+  margin-top: auto;
 }
 
 .projects-content {
@@ -422,7 +422,6 @@ header li:hover {
   max-width: 200px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border: 10px solid var(--color-olive-50);
   display: block;
   margin: 0 auto;
 }
@@ -526,6 +525,7 @@ main ul {
 
 .project-info {
   display: flex;
-  gap: 40px;
-  margin-top: 15em;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 434px;
 }
