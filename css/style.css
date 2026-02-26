@@ -29,6 +29,9 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* GLOBAL TYPOGRAPHY */
 h1 {
@@ -60,6 +63,7 @@ section,
 
 @media (min-width: 768px) {
   .row {
+    margin-top: 20px;
     margin-left: -2%;
     margin-right: -2%;
     display: flex;
@@ -222,7 +226,7 @@ header li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  margin: 3em 0 4em 0;
 }
 
 .folder {
@@ -453,6 +457,10 @@ header li:hover {
 
 
 /* FOOTER */
+footer {
+  height: 500px;
+  background-color: pink;
+}
 
 
 
@@ -464,6 +472,8 @@ header li:hover {
 .projects-wrapper {
   position: relative;
   margin-top: auto;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
 .projects-content {
@@ -596,4 +606,25 @@ main ul {
   flex-direction: column;
   justify-content: space-between;
   height: 434px;
+}
+
+/* .challenges-paragraph {
+  margin-top: 100px;
+} */
+
+.portfolio-entry section {
+  margin-bottom: 150px;
+}
+
+.portfolio-entry img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.final-project-img {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
