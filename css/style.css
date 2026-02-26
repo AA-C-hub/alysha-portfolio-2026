@@ -217,6 +217,95 @@ header li:hover {
   border-radius: 50%;
 }
 
+/* FOLDER-STYLE TABS */
+.selected-works-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.folder {
+  position: relative;
+  width: 1000px;
+}
+
+.tabs {
+  position: absolute;
+  top: -35px;
+  left: 40px;
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.tab {
+  width: 90px;
+  height: 50px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #222;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.tab:hover {
+  transform: translateY(-3px);
+}
+
+/* Colors for tabs */
+.tab:nth-child(1) {
+  background: #1f97d4;
+}
+
+.tab:nth-child(2) {
+  background: #0f8b8d;
+}
+
+.tab:nth-child(3) {
+  background: #2ba84a;
+}
+
+.tab:nth-child(4) {
+  background: #9bc53d;
+}
+
+.tab:nth-child(5) {
+  background: #f5d547;
+}
+
+.tab:nth-child(6) {
+  background: #f29e4c;
+}
+
+.tab:nth-child(7) {
+  background: #f26419;
+}
+
+.panel {
+  position: relative;
+  border-radius: 10px;
+  padding: 60px;
+  min-height: 300px;
+  color: #0c2a3a;
+  z-index: 5;
+  transition: background-color 0.3s ease;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
 /* Hero section */
 .hero {
   padding: 4vh 5vw;
@@ -368,11 +457,11 @@ header li:hover {
 .section {
   padding: 2em;
   margin-bottom: 2em;
-  border: 20px solid var(--color-olive-50);
+  /* border: 20px solid var(--color-olive-50);
 
   &:nth-child(odd) {
     border: 20px solid var(--color-orange-50);
-  }
+  } */
 }
 
 .section img {
