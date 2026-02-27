@@ -29,6 +29,12 @@
 
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-beige-50);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -124,7 +130,8 @@ section,
 header {
   color: rgba(255, 255, 255, 0.8);
   padding: 1em;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
@@ -137,7 +144,8 @@ header a {
 }
 
 header a:hover {
-  color: black;
+  color: var(--color-orange);
+  font-weight: 700;
 }
 
 header li:hover {
@@ -145,9 +153,12 @@ header li:hover {
   box-shadow: 0 6px 18px var(--color-olive-50);
 }
 
+
 /* SITE ID */
 .site-id h1 {
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* SITE NAV */
@@ -291,7 +302,7 @@ header li:hover {
 
 /* Hero section */
 .hero {
-  padding: 4vh 5vw;
+  padding: 2vw;
   /* min-height: calc(100vh - 56px); */
 }
 
@@ -302,11 +313,11 @@ header li:hover {
   box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
-.hero-inner {
+/* .hero-inner {
   display: flex;
   align-items: center;
   gap: 80px;
-}
+} */
 
 .image-box {
   width: 420px;
@@ -351,6 +362,7 @@ header li:hover {
 .marquee-container {
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
+  margin-top: 50px;
   padding: 1rem 0;
 }
 
@@ -439,12 +451,9 @@ header li:hover {
 
 .section {
   padding: 2em;
-  margin-bottom: 2em;
-  /* border: 20px solid var(--color-olive-50);
+  padding-top: 100px;
+  margin-bottom: 120px;
 
-  &:nth-child(odd) {
-    border: 20px solid var(--color-orange-50);
-  } */
 }
 
 .section img {
@@ -477,8 +486,7 @@ footer {
 }
 
 .projects-content {
-  background: #fff;
-  border: 2px solid #000;
+
   border-radius: 0 0 25px 25px;
   padding: 100px 40px 60px 40px;
 }
@@ -605,21 +613,33 @@ main ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 434px;
+  height: 400px;
 }
 
-/* .challenges-paragraph {
-  margin-top: 100px;
-} */
-
-.portfolio-entry section {
-  margin-bottom: 150px;
+.paragraph-section {
+  margin-top: 150px;
 }
 
 .portfolio-entry img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.portfolio-entry {
+  padding: 2.5em;
+}
+
+.gallery {
+  margin-top: 150px;
+}
+
+.gallery-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+  padding-top: 30px;
 }
 
 .final-project-img {
