@@ -245,7 +245,6 @@ header li:hover {
 
 .circle:hover {
   background: var(--color-orange-100);
-  cursor: url('../img/go-home-cursor.png'), auto;
 }
 
 .circle-main {
