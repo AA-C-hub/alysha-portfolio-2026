@@ -146,19 +146,19 @@ header a {
 
 header a:hover {
   color: var(--color-orange);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 header li {
   text-decoration: underline 0.15em rgba(0, 0, 0, 0);
   /* Sets initial color to transparent */
-  text-underline-offset: 4px;
+  text-underline-offset: 7px;
   transition: text-decoration-color 300ms;
   /* Smooth transition for the color */
 }
 
 header li:hover {
-  text-decoration-color: var(--color-orange-100);
+  text-decoration-color: var(--color-orange);
   /* Makes the underline visible on hover */
 }
 
