@@ -173,6 +173,11 @@ header li:hover {
 }
 
 /* SITE NAV */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .site-nav ul {
   display: flex;
   justify-content: flex-end;
@@ -206,9 +211,28 @@ header li:hover {
   height: 56px;
   border-bottom: 2px solid #000;
   border-radius: 10px 10px 0 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  justify-content: space-between;
   padding: 0 16px;
+}
+
+@media (width < 768px) {
+  .top-bar {
+    /* display: flex; */
+    grid-template-columns: auto auto 1fr;
+    gap: 12px
+  }
+}
+
+.top-bar h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
 }
 
 .projects-top-bar {
@@ -496,7 +520,8 @@ header li:hover {
 /* FOOTER */
 footer {
   height: 500px;
-  background-color: pink;
+  background-color: var(--color-beige-50);
+  text-align: center;
 }
 
 
@@ -516,13 +541,22 @@ footer {
 .projects-content {
 
   border-radius: 0 0 25px 25px;
-  padding: 100px 40px 60px 40px;
+  padding: 80px 50px 60px 50px;
+}
+
+.projects-content h1 {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 2.5em;
+  /* text-align: center; */
+  width: 100%;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 50px;
   justify-items: center;
 }
 
@@ -533,7 +567,7 @@ footer {
 
 .project-card img {
   width: 100%;
-  max-width: 200px;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
@@ -541,8 +575,12 @@ footer {
 }
 
 .project-card p {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 18px;
+  transition: transform 0.4s ease;
+  text-align: left;
+  /* background: pink; */
+  width: 100%;
 }
 
 .project-card {
@@ -570,12 +608,15 @@ footer {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  border-radius: 5px;
+
 }
 
 /* PROJECT CARD ANIMATION HOVER ZOOM */
 /* HOVER */
 .project-card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* LIFT EFFECT */
@@ -583,8 +624,9 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
+.project-card:hover p {
+  /* transform: translateY(4px); */
+  transform: translate(0px, 3px) scale(1.03);
 }
 
 
@@ -598,7 +640,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -611,7 +653,7 @@ footer {
     font-size: 18px;
     padding: 8px 20px;
   }
-}
+} */
 
 /* PROJECTS */
 
