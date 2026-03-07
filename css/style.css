@@ -345,11 +345,27 @@ header li:hover {
 
 .project-content {
   display: none;
+  background: #fffaec;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
 .project-content.active {
   display: block;
 }
+
+.project-content p {
+  max-width: 290px;
+}
+
+.project-content h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
 
 
 /* Hero section */
@@ -522,6 +538,7 @@ header li:hover {
   margin-top: 80px;
   padding: 40px 20px;
   border-top: 2px solid #000;
+  background-color: #E0FB6F;
 }
 
 .footer-container {
@@ -533,7 +550,7 @@ header li:hover {
   gap: 40px;
 }
 
-.footer-left h2 {
+.footer-left h1 {
   margin: 0;
 }
 
@@ -561,9 +578,20 @@ header li:hover {
 .socials a {
   margin-right: 12px;
   font-size: 14px;
+  font-family: var(--body-font);
 }
 
+.footer-nav a:hover {
+  color: var(--color-orange);
+  font-weight: 600;
+}
 
+.socials a:hover {
+  margin-right: 12px;
+  font-size: 14px;
+  font-family: var(--body-font);
+  color: var(--color-orange);
+}
 
 /* PROJECT PAGES */
 .container {
@@ -726,6 +754,10 @@ main ul {
 }
 
 .paragraph-section {
+  margin-top: 150px;
+}
+
+.wip-section {
   margin-top: 150px;
 }
 
