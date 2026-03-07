@@ -518,10 +518,49 @@ header li:hover {
 
 
 /* FOOTER */
-footer {
-  height: 500px;
-  background-color: var(--color-beige-50);
-  text-align: center;
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 20px;
+  border-top: 2px solid #000;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-left h2 {
+  margin: 0;
+}
+
+.footer-left p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.footer-nav li {
+  margin-bottom: 6px;
+}
+
+.footer-nav a,
+.socials a {
+  text-decoration: none;
+  color: black;
+}
+
+.socials a {
+  margin-right: 12px;
+  font-size: 14px;
 }
 
 
