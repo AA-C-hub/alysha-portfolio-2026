@@ -815,6 +815,10 @@ main ul {
   margin-top: 150px;
 }
 
+.paragraph-section p {
+  max-width: 450px;
+}
+
 .wip-section {
   margin-top: 150px;
 }
@@ -989,5 +993,71 @@ main ul {
 
 /* pause animation on hover */
 .frame-animation:hover img {
+  animation-play-state: paused;
+}
+
+/* FRAME ANIMATION BEARS */
+.frame-animation-bears {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* stack images */
+.frame-animation-bears img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  opacity: 0;
+  animation: bearFrames 4s infinite linear;
+}
+
+/* frame timing */
+.frame-animation-bears img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.frame-animation-bears img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.frame-animation-bears img:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.frame-animation-bears img:nth-child(4) {
+  animation-delay: 3s;
+}
+
+@keyframes bearFrames {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* pause on hover */
+.frame-animation-bears:hover img {
   animation-play-state: paused;
 }
