@@ -436,6 +436,13 @@ header li:hover {
   box-shadow: 0 6px 18px var(--color-olive-50);
 }
 
+.resume-buttons {
+  margin-top: 20px;
+  gap: 20px;
+}
+
+
+
 /* TEXT MARQUEE */
 
 .marquee-container {
@@ -559,7 +566,7 @@ header li:hover {
 }
 
 .header {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--color-orange);
   margin-bottom: 30px;
   padding-bottom: 15px;
 }
@@ -586,7 +593,7 @@ header li:hover {
 .section-title {
   font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-orange-100);
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
