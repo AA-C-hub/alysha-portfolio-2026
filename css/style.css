@@ -66,6 +66,15 @@ h2 {
   font-family: var(--body-font);
 }
 
+h3 {
+  font-family: "mono45-headline", monospace;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
 /* GRID LAYOUT */
 section,
 .container {
@@ -530,6 +539,84 @@ header li:hover {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* RESUME */
+.resume {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 50px;
+}
+
+.resume-info {
+  font-family: var(--body-font);
+}
+
+.resume-section {
+  margin-bottom: 50px;
+  width: 300px;
+}
+
+.header {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.name {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 18px;
+  color: #666;
+}
+
+.contact {
+  font-size: 14px;
+  color: #777;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.skill {
+  margin-bottom: 5px;
+}
+
+.edu-item,
+.job {
+  margin-bottom: 15px;
+}
+
+.school,
+.job-title {
+  font-weight: bold;
+}
+
+.job-company {
+  color: #555;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+}
+
+.job-detail {
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 
