@@ -1078,6 +1078,32 @@ main ul {
   }
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 2em;
+}
+
+.small-img {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* GALLERY IMG HOVER; NOT OUT OF BOX SCALE */
 .gallery-img div {
   overflow: hidden;
