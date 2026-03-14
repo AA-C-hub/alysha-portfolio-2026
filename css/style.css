@@ -452,10 +452,9 @@ header li:hover {
 
 .project-content {
   display: none;
-  background: #fffaec;
+  /* background: #fffaec; */
   padding: 2em;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
 .project-content.active {
@@ -464,13 +463,16 @@ header li:hover {
 
 .project-content p {
   max-width: 290px;
+  color: #fffaec;
+  margin-bottom: 1em;
 }
 
 .project-content h1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 1em;
+  font-size: -webkit-xxx-large;
+  color: #fffdf8;
 }
 
 
@@ -794,6 +796,25 @@ header li:hover {
   font-size: 14px;
   font-family: var(--body-font);
   color: var(--color-orange);
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-right {
+    width: 100%;
+  }
+
+  .socials {
+    margin-top: 8px;
+  }
+
 }
 
 /* PROJECT PAGES */
