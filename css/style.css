@@ -1201,8 +1201,9 @@ main ul {
 /* COLOR PALETTE ANIMATION */
 .frame-animation {
   position: relative;
-  width: 450px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 45 / 25;
   /* shorter height */
   overflow: hidden;
 }
