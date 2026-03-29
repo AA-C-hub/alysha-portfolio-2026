@@ -561,7 +561,24 @@ header li:hover {
   animation: marquee 40s linear infinite;
 }
 
+.marquee-track-main {
+  display: flex;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+}
+
 .marquee-track span {
+  flex-shrink: 0;
+  padding-right: 4rem;
+  font-family: 'Helvetica', sans-serif;
+  font-size: clamp(3rem, 12vw, 10rem);
+  font-weight: 700;
+  text-transform: lowercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.marquee-track-main span {
   flex-shrink: 0;
   padding-right: 4rem;
   font-family: 'Helvetica', sans-serif;
@@ -815,6 +832,41 @@ header li:hover {
     margin-top: 8px;
   }
 
+}
+
+.gif-card {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.gif-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.gif-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* second image hidden initially */
+.img-hover {
+  opacity: 0;
+}
+
+/* HOVER EFFECT */
+.gif-card:hover .img-default {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.gif-card:hover .img-hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* PROJECT PAGES */
