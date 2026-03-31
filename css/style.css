@@ -496,12 +496,6 @@ header li:hover {
   box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
-/* .hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-} */
-
 .image-box {
   width: 420px;
   height: 300px;
@@ -564,7 +558,6 @@ header li:hover {
   width: 0%;
   height: 2px;
   background: #ff7aa2;
-  /* soft playful pink (change if needed) */
   border-radius: 2px;
   transition: width 0.3s ease;
 }
@@ -572,7 +565,6 @@ header li:hover {
 /* hover effect */
 .footer-button-cap:hover {
   transform: translateX(4px);
-  /* tiny playful movement */
   color: #000;
 }
 
@@ -594,7 +586,7 @@ header li:hover {
   transition: all 0.25s ease;
 }
 
-/* hover = lift + soft color */
+/* hover lift + soft color */
 .footer-button:hover {
   transform: translateY(-3px);
   border-color: #ff7aa2;
