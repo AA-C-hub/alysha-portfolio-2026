@@ -77,6 +77,12 @@ h3 {
   margin-bottom: 16px;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid #000;
+  margin-bottom: 2em;
+}
+
 /* GRID LAYOUT */
 /* GRID SYSTEM (12 COLUMN) */
 
@@ -539,7 +545,62 @@ header li:hover {
   gap: 20px;
 }
 
+.footer-button-cap {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: all 0.25s ease;
+}
 
+/* playful underline */
+.footer-button-cap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #ff7aa2;
+  /* soft playful pink (change if needed) */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.footer-button-cap:hover {
+  transform: translateX(4px);
+  /* tiny playful movement */
+  color: #000;
+}
+
+.footer-button-cap:hover::after {
+  width: 100%;
+}
+
+/* boxed button */
+.footer-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+
+  transition: all 0.25s ease;
+}
+
+/* hover = lift + soft color */
+.footer-button:hover {
+  transform: translateY(-3px);
+  border-color: #ff7aa2;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  color: #000;
+}
 
 /* TEXT MARQUEE */
 
@@ -815,6 +876,40 @@ header li:hover {
   color: var(--color-orange);
 }
 
+.footer-head {
+  font-family: "articulat-heavy-cf", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3em;
+  display: inline-block;
+  animation: floaty 3s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.footer-cap {
+  font-family: "articulat-heavy-cf", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.footer-info {
+  margin-top: 1em;
+}
+
 /* Small screens */
 @media (max-width: 600px) {
 
@@ -833,6 +928,7 @@ header li:hover {
   }
 
 }
+
 
 .gif-card {
   display: inline-block;
