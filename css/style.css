@@ -686,8 +686,17 @@ header a:hover::after {
 }
 
 .resume-buttons {
-  margin-top: 20px;
-  gap: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+/* make buttons flexible */
+.resume-buttons .button {
+  flex: 1;
+  /* equal width */
+  text-align: center;
 }
 
 .footer-button-cap {
@@ -743,6 +752,19 @@ header a:hover::after {
   border-color: #ff7aa2;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   color: #000;
+}
+
+@media (max-width: 600px) {
+  .footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .footer-nav li {
+    list-style: none;
+  }
 }
 
 /* TEXT MARQUEE */
@@ -1116,6 +1138,10 @@ header a:hover::after {
   margin-top: 1em;
 }
 
+.footer-info h1 {
+  font-size: clamp(2em, 4vw, 2.5rem);
+}
+
 /* Small screens */
 @media (max-width: 600px) {
 
@@ -1277,7 +1303,7 @@ header a:hover::after {
 
 @media (max-width: 900px) {
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .tab {
@@ -1376,6 +1402,7 @@ main ul {
   height: 380px;
 }
 
+
 .project-info-booyah {
   display: flex;
   flex-direction: column;
@@ -1390,6 +1417,16 @@ main ul {
   height: 370px;
 }
 
+@media (max-width: 768px) {
+
+  .project-info-pj-intro,
+  .project-info-booyah,
+  .project-info-helsinki {
+    height: auto;
+    gap: 20px;
+  }
+}
+
 .paragraph-section {
   margin-top: 150px;
 }
@@ -1402,8 +1439,12 @@ main ul {
 }
 
 .paragraph-section p {
-  max-width: 400px;
+  max-width: 450px;
   margin-top: 0;
+}
+
+.stack p {
+  margin-top: 1em;
 }
 
 @media (max-width: 768px) {
@@ -1425,6 +1466,11 @@ main ul {
 
 .portfolio-entry {
   padding: 2.5em;
+}
+
+.portfolio-entry h1 {
+  border-bottom: #0a0a0a 2px solid;
+  width: fit-content;
 }
 
 .logo-gallery-img {
