@@ -88,6 +88,13 @@ hr {
 
 .row {
   --grid-gap: 2em;
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.row-case-study {
+  --grid-gap: 2em;
 }
 
 .row>* {
@@ -100,11 +107,32 @@ hr {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
+    flex-direction: column;
+  }
+
+  .row-case-study {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
   }
 
   /* SEMANTIC COLUMNS */
   .one-half {
     grid-column: auto / span 6;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .one-half-case-study {
+    grid-column: auto / span 6;
+  }
+
+  .one-half img {
+    height: 100%;
+    object-fit: cover;
   }
 
   .one-third {
@@ -253,28 +281,58 @@ header {
 
 }
 
+header h1 a {
+  color: #000000;
+}
+
+header h1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  /* adjust distance from text */
+  width: 0%;
+  height: 2px;
+  background-color: #ff7aa2;
+  transition: width 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #ff0c55;
+}
+
+/* base link */
 header a {
   color: black;
   text-decoration: none;
-
+  position: relative;
+  display: inline-block;
+  /* key for proper underline width */
 }
 
+/* underline (hidden by default) */
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  /* adjust distance from text */
+  width: 0%;
+  height: 2px;
+  background-color: #ff7aa2;
+  transition: width 0.3s ease;
+}
+
+/* hover text */
 header a:hover {
-  color: var(--color-orange);
+  color: #ff0c55;
   font-weight: 600;
 }
 
-header li {
-  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  text-underline-offset: 7px;
-  transition: text-decoration-color 300ms;
+/* animate underline */
+header a:hover::after {
+  width: 100%;
 }
-
-header li:hover {
-  text-decoration-color: var(--color-orange);
-  /* Makes the underline visible on hover */
-}
-
 
 
 
@@ -387,36 +445,47 @@ header li:hover {
   font-weight: 700;
 }
 
-.circle {
-  width: 20px;
-  height: 20px;
-  background: var(--color-orange);
-  border-radius: 50%;
-}
-
-.circle:hover {
-  background: var(--color-orange-100);
-}
-
+.circle,
 .circle-main {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  /* was 20px */
+  height: 40px;
+  /* was 20px */
   background: var(--color-orange);
-  border-radius: 50%;
+
+  clip-path: polygon(50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%);
+
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
+.circle:hover,
 .circle-main:hover {
   background: var(--color-orange-100);
+  transform: scale(1.1);
 }
 
 
 
 /* FOLDER-STYLE TABS */
+.selected-works-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .selected-works-name {
-  font-size: 3em;
-  margin: auto;
-  max-width: 900px;
+  font-size: clamp(2rem, 5vw, 3em);
   border-bottom: #F35900 2px solid;
+  padding-bottom: 0.3em;
 }
 
 .selected-works-container {
@@ -426,19 +495,22 @@ header li:hover {
   margin: 3em 0 4em 0;
 }
 
-.folder {
-  position: relative;
-  width: 1000px;
-}
-
 .tabs {
   position: absolute;
   top: -35px;
   left: 40px;
   display: flex;
   gap: 8px;
-  z-index: 1;
 }
+
+.folder {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  overflow: visible;
+  /* 👈 THIS FIXES IT */
+}
+
 
 .tab {
   width: 110px;
@@ -469,10 +541,10 @@ header li:hover {
 .panel {
   position: relative;
   border-radius: 10px;
-  padding: 60px;
+  padding: clamp(20px, 4vw, 60px);
   min-height: 300px;
   color: #0c2a3a;
-  z-index: 5;
+  z-index: 1;
   transition: background-color 0.3s ease;
 }
 
@@ -502,6 +574,44 @@ header li:hover {
   color: #fffdf8;
 }
 
+.project-content img {
+  width: 100%;
+  height: auto;
+  max-width: 380px;
+}
+
+@media (max-width: 768px) {
+
+  .row {
+    flex-direction: column;
+  }
+
+  .project-content p {
+    max-width: 100%;
+  }
+
+  .tabs {
+    position: static;
+    /* remove absolute */
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    flex: 1;
+    min-width: 120px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .project-content h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
 
 
 /* Hero section */
@@ -541,18 +651,38 @@ header li:hover {
   display: inline-block;
   background: var(--color-orange);
   color: #0a0a0a;
-  padding: 14px 28px;
+  padding: clamp(12px, 2vw, 14px) clamp(20px, 4vw, 28px);
   border-radius: 999px;
   border: solid 2px #000;
   text-decoration: none;
   font-family: 'Helvetica', sans-serif;
   font-weight: 600;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 80%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px var(--color-olive-50);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px var(--color-olive-50);
+}
+
+@media (max-width: 768px) {
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
 }
 
 .resume-buttons {
@@ -755,7 +885,7 @@ header li:hover {
 }
 
 .about-resume {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   background: white;
   padding: 50px;
@@ -770,8 +900,8 @@ header li:hover {
 }
 
 .about-resume p {
-  width: 400px;
-  text-wrap: pretty;
+  max-width: 400px;
+  width: 100%;
 }
 
 .about-resume h1 {
@@ -783,7 +913,8 @@ header li:hover {
   height: auto;
   display: block;
   border-radius: 10px;
-  margin: 2em 1em 1em 1em;
+  margin: 0;
+  /* remove uneven margins */
   box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
 }
 
@@ -853,15 +984,29 @@ header li:hover {
   font-size: 14px;
 }
 
-/* Small screens */
-@media (max-width: 600px) {
-
-  .resume {
+/* SMALL SCREENS */
+@media (max-width: 768px) {
+  .row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
   }
 
+  .about-resume {
+    padding: 30px 20px;
+  }
+
+  .about-resume p {
+    max-width: 100%;
+  }
+
+  .resume-name h1 {
+    line-height: 1em;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 
@@ -1249,8 +1394,22 @@ main ul {
   margin-top: 150px;
 }
 
+.paragraph-section h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1em;
+  font-size: 2.5em;
+}
+
 .paragraph-section p {
-  max-width: 450px;
+  max-width: 400px;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .paragraph-section p {
+    margin-top: 1em;
+  }
 }
 
 .wip-section {
@@ -1290,6 +1449,10 @@ main ul {
 
 .gallery {
   margin-top: 150px;
+}
+
+.gallery h1 {
+  margin-top: 2em;
 }
 
 .gallery-img {
