@@ -55,4 +55,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    Fancybox.bind("[data-fancybox='gallery']", {
+        on: {
+            reveal: () => {
+                document.querySelector('.carousel-track').style.animationPlayState = 'paused';
+            },
+            closing: () => {
+                document.querySelector('.carousel-track').style.animationPlayState = 'running';
+            }
+        }
+    });
+
 });

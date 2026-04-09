@@ -7,6 +7,9 @@
     <title>My Projects</title>
     <link rel="stylesheet" href="https://use.typekit.net/jfc1bre.css">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <!-- MAIN CSS! -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
@@ -82,18 +85,47 @@
                             <section class="carousel">
                                 <div class="carousel-track">
 
-                                    <img src="../img/pj-book-pics/pj-sketch1.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch2.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch3.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch4.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch5.JPG" alt="sketch">
+                                    <a href="../img/pj-book-pics/pj-sketch1.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch1.JPG" alt="sketch 1">
+                                    </a>
 
-                                    <!-- duplicate images for seamless loop -->
-                                    <img src="../img/pj-book-pics/pj-sketch1.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch2.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch3.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch4.JPG" alt="sketch">
-                                    <img src="../img/pj-book-pics/pj-sketch5.JPG" alt="sketch">
+                                    <a href="../img/pj-book-pics/pj-sketch2.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch2.JPG" alt="sketch 2">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch3.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch3.JPG" alt="sketch 3">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch4.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch4.JPG" alt="sketch 4">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch5.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch5.JPG" alt="sketch 5">
+                                    </a>
+
+                                    <!-- duplicates for seamless loop -->
+
+                                    <a href="../img/pj-book-pics/pj-sketch1.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch1.JPG" alt="sketch 1">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch2.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch2.JPG" alt="sketch 2">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch3.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch3.JPG" alt="sketch 3">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch4.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch4.JPG" alt="sketch 4">
+                                    </a>
+
+                                    <a href="../img/pj-book-pics/pj-sketch5.JPG" data-fancybox="gallery">
+                                        <img src="../img/pj-book-pics/pj-sketch5.JPG" alt="sketch 5">
+                                    </a>
 
                                 </div>
                             </section>
@@ -216,6 +248,23 @@
 
     <!--MAIN JS-->
     <script src="js/script.js"></script>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: {
+                autoStart: true,
+            },
+            Toolbar: {
+                display: [
+                    "zoom",
+                    "close"
+                ],
+            },
+        });
+    </script>
 
 </body>
 

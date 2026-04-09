@@ -7,6 +7,9 @@
     <title>My Projects</title>
     <link rel="stylesheet" href="https://use.typekit.net/jfc1bre.css">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <!-- MAIN CSS! -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
@@ -79,36 +82,54 @@
                             <section class="carousel">
                                 <div class="carousel-track">
 
-                                    <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    <a href="../img/olympic-picto-pics/archery-copy.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
+                                    </a>
 
-                                    <!-- duplicate images for seamless loop -->
-                                    <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    <a href="../img/olympic-picto-pics/CIRCLE-copy.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
+                                    </a>
 
+                                    <a href="../img/olympic-picto-pics/ink_sketch.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
+                                    </a>
 
-                                    <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    <a href="../img/olympic-picto-pics/ink_sketch2.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
+                                    </a>
 
+                                    <a href="../img/olympic-picto-pics/waves.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
+                                    </a>
 
-                                    <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
-                                    <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    <a href="../img/olympic-picto-pics/IMG_3418.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    </a>
+
+                                    <!-- duplicates still work -->
+                                    <a href="../img/olympic-picto-pics/archery-copy.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/archery-copy.jpg" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/olympic-picto-pics/CIRCLE-copy.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/CIRCLE-copy.jpg" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/olympic-picto-pics/ink_sketch.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/ink_sketch.jpg" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/olympic-picto-pics/ink_sketch2.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/ink_sketch2.jpg" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/olympic-picto-pics/waves.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/waves.jpg" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/olympic-picto-pics/IMG_3418.jpg" data-fancybox="gallery">
+                                        <img src="../img/olympic-picto-pics/IMG_3418.jpg" alt="sketch">
+                                    </a>
 
                                 </div>
                             </section>
@@ -271,6 +292,23 @@
         </section>
 
     </main>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: {
+                autoStart: true,
+            },
+            Toolbar: {
+                display: [
+                    "zoom",
+                    "close"
+                ],
+            },
+        });
+    </script>
 
 </body>
 

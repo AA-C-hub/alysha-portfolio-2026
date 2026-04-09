@@ -7,6 +7,9 @@
     <title>My Projects</title>
     <link rel="stylesheet" href="https://use.typekit.net/jfc1bre.css">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <!-- MAIN CSS! -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
@@ -76,27 +79,73 @@
                             <section class="carousel">
                                 <div class="carousel-track">
 
-                                    <img src="../img/booyah-pics/coco-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/fudge-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/cookie-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/rocky-sketch-1.webp" alt="sketch">
+                                    <a href="../img/booyah-pics/coco-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/coco-sketch-1.webp" alt="coco sketch">
+                                    </a>
 
-                                    <!-- duplicate images for seamless loop -->
-                                    <img src="../img/booyah-pics/coco-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/fudge-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/cookie-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/rocky-sketch-2.webp" alt="sketch">
+                                    <a href="../img/booyah-pics/fudge-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/fudge-sketch-1.webp" alt="fudge sketch">
+                                    </a>
 
-                                    <img src="../img/booyah-pics/coco-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/fudge-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/cookie-sketch-1.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/rocky-sketch-1.webp" alt="sketch">
+                                    <a href="../img/booyah-pics/cookie-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/cookie-sketch-1.webp" alt="cookie sketch">
+                                    </a>
 
-                                    <img src="../img/booyah-pics/coco-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/fudge-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/cookie-sketch-2.webp" alt="sketch">
-                                    <img src="../img/booyah-pics/rocky-sketch-2.webp" alt="sketch">
+                                    <a href="../img/booyah-pics/rocky-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/rocky-sketch-1.webp" alt="rocky sketch">
+                                    </a>
 
+                                    <!-- duplicates for seamless loop -->
+
+                                    <a href="../img/booyah-pics/coco-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/coco-sketch-2.webp" alt="coco sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/fudge-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/fudge-sketch-2.webp" alt="fudge sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/cookie-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/cookie-sketch-2.webp" alt="cookie sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/rocky-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/rocky-sketch-2.webp" alt="rocky sketch">
+                                    </a>
+
+                                    <!-- repeat again -->
+
+                                    <a href="../img/booyah-pics/coco-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/coco-sketch-1.webp" alt="coco sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/fudge-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/fudge-sketch-1.webp" alt="fudge sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/cookie-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/cookie-sketch-1.webp" alt="cookie sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/rocky-sketch-1.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/rocky-sketch-1.webp" alt="rocky sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/coco-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/coco-sketch-2.webp" alt="coco sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/fudge-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/fudge-sketch-2.webp" alt="fudge sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/cookie-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/cookie-sketch-2.webp" alt="cookie sketch">
+                                    </a>
+
+                                    <a href="../img/booyah-pics/rocky-sketch-2.webp" data-fancybox="gallery">
+                                        <img src="../img/booyah-pics/rocky-sketch-2.webp" alt="rocky sketch">
+                                    </a>
 
                                 </div>
                             </section>
@@ -317,6 +366,23 @@
                 </div>
 
     </main>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: {
+                autoStart: true,
+            },
+            Toolbar: {
+                display: [
+                    "zoom",
+                    "close"
+                ],
+            },
+        });
+    </script>
 
 </body>
 

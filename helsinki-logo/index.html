@@ -7,6 +7,9 @@
     <title>My Projects</title>
     <link rel="stylesheet" href="https://use.typekit.net/jfc1bre.css">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <!-- MAIN CSS! -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
@@ -68,7 +71,8 @@
                                     <p>Helsinki, Finland emphasizes equality, simplicity, and functionality, which are
                                         reflected in its architecture and visual style. A few of my sketches began with
                                         the main concept of Helsinki’s architecture, particularly focusing on the
-                                        details of its windows. These sketches explored the decorative shapes and
+                                        details of its windows and the shape of their domes. These sketches explored the
+                                        decorative shapes and
                                         organic lines commonly seen in Art Nouveau buildings.
                                     </p>
                                 </div>
@@ -78,43 +82,61 @@
                             <section class="carousel">
                                 <div class="carousel-track">
 
-                                    <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    <a href="../img/helsinki-pics/helsinki-sketch1.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
+                                    </a>
 
-                                    <!-- duplicate images for seamless loop -->
-                                    <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    <a href="../img/helsinki-pics/helsinki-sketch2.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
+                                    </a>
 
-                                    <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    <a href="../img/helsinki-pics/helsinki-sketch3.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    </a>
 
-                                    <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
-                                    <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    <!-- duplicates still work -->
+                                    <a href="../img/helsinki-pics/helsinki-sketch1.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch1.JPG" alt="sketch">
+                                    </a>
 
+                                    <a href="../img/helsinki-pics/helsinki-sketch2.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch2.JPG" alt="sketch">
+                                    </a>
+
+                                    <a href="../img/helsinki-pics/helsinki-sketch3.JPG" data-fancybox="gallery">
+                                        <img src="../img/helsinki-pics/helsinki-sketch3.JPG" alt="sketch">
+                                    </a>
 
                                 </div>
                             </section>
 
                         </div>
 
-                        <div class="logo-gallery-img">
-                            <div class="logo-img">
-                                <img src="../img/helsinki-pics/helsinki-logo-1.png" width="50" height="auto">
-                            </div>
-                            <div class="logo-img">
-                                <img src="../img/helsinki-pics/helsinki-logo-2.png" width="50" height="auto">
-                            </div>
-                            <div class="logo-img">
-                                <img src="../img/helsinki-pics/helsinki-logo-3.png" width="50" height="auto">
-                            </div>
+                        <div class="final-project-img">
+                            <img src="../img/helsinki-pics/helsinki-artboard-1.jpg" width="100%" height="auto">
+                        </div>
+
+                        <div class="final-project-img">
+                            <img src="../img/helsinki-pics/helsinki-artboard-2.jpg" width="100%" height="auto">
                         </div>
 
 
+
                         <div class="gallery">
+
+                            <h1>THE 3 LOGOS</h1>
+
+                            <div class="logo-gallery-img">
+                                <div class="logo-img">
+                                    <img src="../img/helsinki-pics/helsinki-logo-1.png" width="50" height="auto">
+                                </div>
+                                <div class="logo-img">
+                                    <img src="../img/helsinki-pics/helsinki-logo-2.png" width="50" height="auto">
+                                </div>
+                                <div class="logo-img">
+                                    <img src="../img/helsinki-pics/helsinki-logo-3.png" width="50" height="auto">
+                                </div>
+                            </div>
 
                             <h1>The Final Logo</h1>
 
@@ -184,6 +206,23 @@
         </section>
 
     </main>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: {
+                autoStart: true,
+            },
+            Toolbar: {
+                display: [
+                    "zoom",
+                    "close"
+                ],
+            },
+        });
+    </script>
 
 </body>
 

@@ -115,6 +115,24 @@ hr {
   color: #6A59CE;
 }
 
+.barakoko-case-study li {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.barakoko-case-study ul li:nth-child(1) strong {
+  color: #a7b734;
+}
+
+.barakoko-case-study ul li:nth-child(2) strong {
+  color: #a365a2;
+}
+
+.barakoko-case-study ul li:nth-child(3) strong {
+  color: #855322;
+}
+
+
 /* HELPERS */
 .space-out {
   margin-top: 150px;
@@ -1267,7 +1285,6 @@ header a:hover::after {
   padding: 0;
   line-height: 1;
   font-size: 2.5em;
-  /* text-align: center; */
   width: 100%;
 }
 
@@ -1295,10 +1312,10 @@ header a:hover::after {
 .project-card p {
   margin-top: 10px;
   font-size: 18px;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.3s ease;
   text-align: left;
-  /* background: pink; */
   width: 100%;
+  position: relative;
 }
 
 .project-card {
@@ -1313,13 +1330,6 @@ header a:hover::after {
   color: inherit;
 }
 
-/* .image-wrapper {
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border: 10px solid #e6e6e6;
-} */
 
 .image-wrapper img {
   width: 100%;
@@ -1347,6 +1357,49 @@ header a:hover::after {
   transform: translate(0px, 3px) scale(1.03);
 }
 
+.project-card a>p {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+/* SVG BEFORE text */
+.project-card a>p::before {
+  content: "";
+  display: inline-block;
+
+  width: 0;
+  /* no space initially */
+  height: 20px;
+  margin-right: 0;
+
+  opacity: 0;
+  transform: translateX(-5px);
+
+  transition:
+    width 0.3s ease,
+    margin 0.3s ease,
+    opacity 0.25s ease,
+    transform 0.3s ease;
+
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0'/%3E%3Cpath d='M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+/* Hover state */
+.project-card:hover a>p::before {
+  width: 20px;
+  /* expands into place */
+  margin-right: 8px;
+  /* adds spacing smoothly */
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media (max-width: 900px) {
   .project-grid {
@@ -1634,7 +1687,6 @@ main ul {
   width: calc(100% + 5em);
   overflow: hidden;
   position: relative;
-  /* background-color: var(--color-orange); */
   padding: 40px 0;
   margin-inline: -2.5em;
 }
@@ -1643,6 +1695,10 @@ main ul {
   display: flex;
   width: max-content;
   animation: scroll 50s linear infinite;
+}
+
+.carousel a {
+  cursor: pointer;
 }
 
 /* pause animation hover on carousel */
