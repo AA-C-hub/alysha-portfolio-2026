@@ -42,10 +42,11 @@ html {
 
 /* GLOBAL TYPOGRAPHY */
 h1 {
-  font-family: "mono45-headline", monospace;
+  font-family: 'ff-din-paneuropean-cond', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 2.5em;
+  text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 16px;
   margin-top: 0;
@@ -1440,14 +1441,21 @@ main ul {
   padding: 0;
 }
 
+.case-study-title {
+  margin-bottom: 1em;
+}
+
+
 .project-hero h1 {
-  margin: 0;
-  font-size: 4em;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 7.5em;
 }
 
 .project-hero p {
   margin-bottom: 0;
-  font-size: 1.2em;
+  font-size: 1.75em;
+  transform: translate(10px, 25px);
 }
 
 .project-hero img {
