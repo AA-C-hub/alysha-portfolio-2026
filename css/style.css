@@ -84,6 +84,7 @@ hr {
   margin-bottom: 2em;
 }
 
+
 .paragraph-section a {
   color: #F35900;
   text-decoration: none;
@@ -1544,6 +1545,10 @@ main ul {
   padding: 0;
   line-height: 1.1em;
   font-size: 2.5em;
+}
+
+.parasection-title h1 {
+  text-align: end;
 }
 
 .paragraph-section p {
